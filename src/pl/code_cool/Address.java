@@ -1,5 +1,7 @@
 package pl.code_cool;
 
+import java.util.Objects;
+
 public class Address {
 
     private String streetName;
@@ -40,4 +42,28 @@ public class Address {
     public void setFlatNumber(int flatNumber) {
         this.flatNumber = flatNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "streetName='" + streetName + '\'' +
+                ", houseNumber=" + houseNumber +
+                ", flatNumber=" + flatNumber +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Address address = (Address) o;
+        return houseNumber == address.houseNumber && flatNumber == address.flatNumber && Objects.equals(streetName, address.streetName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(streetName, houseNumber, flatNumber);
+    }
 }
+
+

@@ -10,7 +10,19 @@ public class Main {
         address.setStreetName("New Street Name");
         System.out.println(address.getStreetName());
 
-        Person person = new Person("Name", "Surname", 30, address);
-        System.out.println(person.getAddress());
+        Person person1 = new Person("Name", "Surname", 30, address);
+        System.out.println(person1.getAddress());
+
+        Person person2 = new Person("Name3", "Surname2000", 30, address);
+
+        System.out.println(person1.hashCode());
+        System.out.println(person2.hashCode());
+
+        System.out.println(person1.equals(person2));
+        System.out.println(person1);
+
+
+
+
     }
 }
