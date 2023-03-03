@@ -1,4 +1,4 @@
-package pl.code_cool;
+package pl.code_cool.objects;
 
 public class Main {
 
