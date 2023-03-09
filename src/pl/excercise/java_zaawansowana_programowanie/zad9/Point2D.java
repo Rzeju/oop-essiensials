@@ -1,6 +1,9 @@
 package pl.excercise.java_zaawansowana_programowanie.zad9;
 
-public class Point2D {
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.Movable;
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.MoveDirection;
+
+public class Point2D implements Movable {
 
     private double x;
     private double y;
@@ -8,6 +11,12 @@ public class Point2D {
     public Point2D(double x, double y) {
         this.x = x;
         this.y = y;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        x = x + moveDirection.getX();
+        y = y + moveDirection.getY();
     }
 
     public double getX() {

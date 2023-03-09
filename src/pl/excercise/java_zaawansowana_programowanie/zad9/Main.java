@@ -1,5 +1,8 @@
 package pl.excercise.java_zaawansowana_programowanie.zad9;
 
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.Movable;
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.MoveDirection;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,6 +33,27 @@ public class Main {
         System.out.println(circle3.getRadius());
         System.out.println(circle3.getPerimeter());
         System.out.println(circle3.getArea());
+
+        MoveDirection moveDirection = new MoveDirection(2, 5);
+        circle1.move(moveDirection);
+
+        System.out.println("Obiekt circle1 po metodzie move()");
+        System.out.println(circle1.getRadius());
+        System.out.println(circle1.getPerimeter());
+        System.out.println(circle1.getArea());
+        System.out.println(circle1);
+
+        Movable movable = center1;
+        movable = circle1;
+
+
+        circle1.resize(3);
+
+        System.out.println("Obiekt circle1 po metodzie resize()");
+        System.out.println(circle1.getRadius());
+        System.out.println(circle1.getPerimeter());
+        System.out.println(circle1.getArea());
+        System.out.println(circle1);
 
     }
 }

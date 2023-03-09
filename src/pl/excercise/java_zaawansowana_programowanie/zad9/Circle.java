@@ -1,6 +1,10 @@
 package pl.excercise.java_zaawansowana_programowanie.zad9;
 
-public class Circle {
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.Movable;
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad10.MoveDirection;
+import pl.excercise.java_zaawansowana_programowanie.zad9.zad11.Resizable;
+
+public class Circle implements Movable, Resizable {
 
     private Point2D center;
     private Point2D point;
@@ -20,6 +24,21 @@ public class Circle {
 
     public double getArea() {
         return Math.PI * Math.pow(getRadius(), 2);
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        center.move(moveDirection);
+        point.move(moveDirection);
+    }
+
+    @Override
+    public void resize(double doubleFactor) {
+        double resizedPointX = center.getX() + ((point.getX() - center.getX()) * doubleFactor);
+        double resizedPointY = center.getY() + ((point.getY() - center.getY()) * doubleFactor);
+
+        point.setX(resizedPointX);
+        point.setY(resizedPointY);
     }
 
     public Point2D[] getSlicePoints() {
