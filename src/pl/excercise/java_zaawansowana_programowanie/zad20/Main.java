@@ -39,5 +39,12 @@ public class Main {
         System.out.println(badTriangle);
         System.out.println(badTriangle.calculatePerimeter());
         System.out.println(badTriangle.calculatePerimeter());
+
+        //Fill method test
+
+        Qube qube1 = new Qube(4);
+        qube1.fill(10);
+        qube1.fill(64);
+        qube1.fill(1000);
     }
 }
