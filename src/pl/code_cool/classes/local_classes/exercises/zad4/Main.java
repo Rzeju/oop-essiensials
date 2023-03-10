@@ -48,5 +48,8 @@ public class Main {
 
         System.out.println(user);
 
+        System.out.println(nameValidator.getClass().getName());
+        System.out.println(loginValidator.getClass().getName());
+
     }
 }

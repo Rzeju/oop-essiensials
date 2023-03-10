@@ -24,6 +24,9 @@ public class UserValidator {
         Email email1 = new Email(email);
         Email email2 = new Email(alternativeEmail);
 
+        System.out.println(email1.getClass().getName());
+        System.out.println(email2.getClass().getName());
+
         return new String[] {email1.email, email2.email};
     }
 
